@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/header';
 import PersonalInfo from './components/PersonalInfo';
 import Experience from './components/Experience';
+import Education from './components/Education';
 
 export default class App extends Component{
     constructor(props){
@@ -17,9 +18,15 @@ export default class App extends Component{
             description: "",
             position: "",
             company: "",
-            city: "",
-            from: "",
-            to: "",
+            experienceCity: "",
+            experienceFrom: "",
+            experienceTo: "",
+            university: "",
+            educationCity: "",
+            degree: "",
+            subject: "",
+            educationFrom: "",
+            educationTo: "",
         }
     }
     
@@ -39,9 +46,20 @@ export default class App extends Component{
         this.setState({
             position: formState.target.position.value,
             company: formState.target.company.value,
-            city: formState.target.city.value,
-            from: formState.target.from.value,
-            to: formState.target.to.value,
+            experienceCity: formState.target.city.value,
+            experienceFrom: formState.target.from.value,
+            experienceTo: formState.target.to.value,
+        })
+    }
+
+    handleEducationInformation = (formState) => {
+        this.setState({
+            university: formState.target.university.value,
+            educationCity: formState.target.city.value,
+            degree: formState.target.degree.value,
+            subject: formState.target.subject.value,
+            educationFrom: formState.target.from.value,
+            educationTo: formState.target.to.value,
         })
     }
 
@@ -60,9 +78,17 @@ export default class App extends Component{
                 <div className="experienceInfo">
                     <div className="position">{this.state.position}</div>
                     <div className="company">{this.state.company}</div>
-                    <div className="city">{this.state.city}</div>
-                    <div className="from">{this.state.from}</div>
-                    <div className="to">{this.state.to}</div>
+                    <div className="city">{this.state.experienceCity}</div>
+                    <div className="from">{this.state.experienceFrom}</div>
+                    <div className="to">{this.state.experienceTo}</div>
+                </div>
+                <div className="educationInfo">
+                    <div className="university">{this.state.university}</div>
+                    <div className="city">{this.state.educationCity}</div>
+                    <div className="degree">{this.state.degree}</div>
+                    <div className="subject">{this.state.subject}</div>
+                    <div className="from">{this.state.educationFrom}</div>
+                    <div className="to">{this.state.educationTo}</div>
                 </div>
             </div>
         );
@@ -74,6 +100,7 @@ export default class App extends Component{
                 <Header />
                 <PersonalInfo handlePersonalInformation = {this.handlePersonalInfo}/>
                 <Experience handleExperienceInformation = {this.handleExperienceInformation} />
+                <Education handleEducationInformation = {this.handleEducationInformation}/>
                 {this.renderDetails()}
             </div>
         );
