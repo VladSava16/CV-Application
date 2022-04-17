@@ -3,15 +3,6 @@ import React, { Component } from 'react';
 export default class PersonalInfo extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            firstName: "",
-            lastName: "",
-            title: "",
-            address: "",
-            phoneNo: "",
-            email: "",
-            description: "",
-        }
     }
 
     submitData = (e) =>{
