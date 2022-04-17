@@ -3,6 +3,7 @@ import Header from './components/header';
 import PersonalInfo from './components/PersonalInfo';
 import Experience from './components/Experience';
 import Education from './components/Education';
+import './style.css';
 
 export default class App extends Component{
     constructor(props){
@@ -98,9 +99,11 @@ export default class App extends Component{
         return(
             <div id="content">
                 <Header />
-                <PersonalInfo handlePersonalInformation = {this.handlePersonalInfo}/>
-                <Experience handleExperienceInformation = {this.handleExperienceInformation} />
-                <Education handleEducationInformation = {this.handleEducationInformation}/>
+                <div className="dataInput">
+                    <PersonalInfo handlePersonalInformation = {this.handlePersonalInfo}/>
+                    <Experience handleExperienceInformation = {this.handleExperienceInformation} />
+                    <Education handleEducationInformation = {this.handleEducationInformation}/>
+                </div>
                 {this.renderDetails()}
             </div>
         );

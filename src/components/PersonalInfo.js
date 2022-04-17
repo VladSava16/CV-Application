@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css';
 
 export default class PersonalInfo extends Component{
     constructor(props){
@@ -14,7 +15,7 @@ export default class PersonalInfo extends Component{
         return(
             <div className="personalInfo">
                 <p className="sectionHeader">Personal Information</p>
-                <form onSubmit = {this.submitData}>
+                <form onSubmit = {this.submitData} className="formSection">
                     <input type="text" name="firstName" placeholder="First Name"/>
                     <input type="text" name="lastName" placeholder="Last Name"/>
                     <input type="text" name="title" placeholder="Title"/>

@@ -12,7 +12,7 @@ export default class Education extends Component{
         return(
             <div className="educationInfo">
                 <p className="sectionHeader">Education</p>
-                <form onSubmit = {this.submitData}>
+                <form onSubmit = {this.submitData} className="formSection">
                     <input type="text" name="university" placeholder="University Name"/>
                     <input type="text" name="city" placeholder="City"/>
                     <input type="text" name="degree" placeholder="Degree"/>

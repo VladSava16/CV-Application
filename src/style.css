@@ -1,3 +1,9 @@
 #root{
+    background-color: #CCCCCC;
+    font-family: 'Nunito', sans-serif;
+}
+.dataInput{
     background-color: #EEEEEE;
+    margin: 5% 30% 5% 30%;
+    padding: 1%;
 }

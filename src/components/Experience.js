@@ -12,7 +12,7 @@ export default class Experience extends Component{
         return(
             <div className="experienceInfo">
                 <p className="sectionHeader">Experience</p>
-                <form onSubmit = {this.submitData}>
+                <form onSubmit = {this.submitData} className="formSection">
                     <input type="text" name="position" placeholder="Position"/>
                     <input type="text" name="company" placeholder="Company"/>
                     <input type="text" name="city" placeholder="City"/>
