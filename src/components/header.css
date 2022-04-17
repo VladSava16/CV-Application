@@ -1,0 +1,14 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.headerBg{
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerTitle{
+    color: #ffffff;
+    font-size: 45px;
+}
