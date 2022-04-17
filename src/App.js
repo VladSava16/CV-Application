@@ -3,6 +3,7 @@ import Header from './components/header';
 import PersonalInfo from './components/PersonalInfo';
 import Experience from './components/Experience';
 import Education from './components/Education';
+import CV from './components/CV';
 import './style.css';
 
 export default class App extends Component{
@@ -12,7 +13,6 @@ export default class App extends Component{
         this.state = {
             firstName: "",
             lastName: "",
-            title: "",
             address: "",
             phoneNo: "",
             email: "",
@@ -35,7 +35,6 @@ export default class App extends Component{
         this.setState({
             firstName: formState.target.firstName.value,
             lastName: formState.target.lastName.value,
-            title: formState.target.title.value,
             address: formState.target.address.value,
             phoneNo: formState.target.phoneNo.value,
             email: formState.target.email.value,
@@ -64,36 +63,36 @@ export default class App extends Component{
         })
     }
 
-    renderDetails = () => {
-        return(
-            <div className="result">
-                <div className="personalInfo">
-                    <div className="firstName">{this.state.firstName}</div>
-                    <div className="lastName">{this.state.lastName}</div>
-                    <div className="title">{this.state.title}</div>
-                    <div className="address">{this.state.address}</div>
-                    <div className="phoneNo">{this.state.phoneNo}</div>
-                    <div className="email">{this.state.email}</div>
-                    <div className="description">{this.state.description}</div>
-                </div>
-                <div className="experienceInfo">
-                    <div className="position">{this.state.position}</div>
-                    <div className="company">{this.state.company}</div>
-                    <div className="city">{this.state.experienceCity}</div>
-                    <div className="from">{this.state.experienceFrom}</div>
-                    <div className="to">{this.state.experienceTo}</div>
-                </div>
-                <div className="educationInfo">
-                    <div className="university">{this.state.university}</div>
-                    <div className="city">{this.state.educationCity}</div>
-                    <div className="degree">{this.state.degree}</div>
-                    <div className="subject">{this.state.subject}</div>
-                    <div className="from">{this.state.educationFrom}</div>
-                    <div className="to">{this.state.educationTo}</div>
-                </div>
-            </div>
-        );
-    }
+    // renderDetails = () => {
+    //     return(
+    //         <div className="result">
+    //             <div className="personalInfo">
+    //                 <div className="firstName">{this.state.firstName}</div>
+    //                 <div className="lastName">{this.state.lastName}</div>
+    //                 <div className="title">{this.state.title}</div>
+    //                 <div className="address">{this.state.address}</div>
+    //                 <div className="phoneNo">{this.state.phoneNo}</div>
+    //                 <div className="email">{this.state.email}</div>
+    //                 <div className="description">{this.state.description}</div>
+    //             </div>
+    //             <div className="experienceInfo">
+    //                 <div className="position">{this.state.position}</div>
+    //                 <div className="company">{this.state.company}</div>
+    //                 <div className="city">{this.state.experienceCity}</div>
+    //                 <div className="from">{this.state.experienceFrom}</div>
+    //                 <div className="to">{this.state.experienceTo}</div>
+    //             </div>
+    //             <div className="educationInfo">
+    //                 <div className="university">{this.state.university}</div>
+    //                 <div className="city">{this.state.educationCity}</div>
+    //                 <div className="degree">{this.state.degree}</div>
+    //                 <div className="subject">{this.state.subject}</div>
+    //                 <div className="from">{this.state.educationFrom}</div>
+    //                 <div className="to">{this.state.educationTo}</div>
+    //             </div>
+    //         </div>
+    //     );
+    // }
 
     render(){
         return(
@@ -104,7 +103,8 @@ export default class App extends Component{
                     <Experience handleExperienceInformation = {this.handleExperienceInformation} />
                     <Education handleEducationInformation = {this.handleEducationInformation}/>
                 </div>
-                {this.renderDetails()}
+                <CV data = {this.state}/>
+                {/* {this.renderDetails()} */}
             </div>
         );
     }

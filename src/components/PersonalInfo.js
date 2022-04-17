@@ -18,7 +18,6 @@ export default class PersonalInfo extends Component{
                 <form onSubmit = {this.submitData} className="formSection">
                     <input type="text" name="firstName" placeholder="First Name"/>
                     <input type="text" name="lastName" placeholder="Last Name"/>
-                    <input type="text" name="title" placeholder="Title"/>
                     <input type="text" name="address" placeholder="Address"/>
                     <input type="text" name="phoneNo" placeholder="Phone Number"/>
                     <input type="text" name="email" placeholder="Email"/>

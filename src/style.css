@@ -1,6 +1,10 @@
 #root{
-    background-color: #CCCCCC;
     font-family: 'Nunito', sans-serif;
+}
+#content{
+    background-color: #CCCCCC;
+    width: 100%;
+    height: auto;
 }
 .dataInput{
     background-color: #EEEEEE;
